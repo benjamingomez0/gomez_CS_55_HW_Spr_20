@@ -21,34 +21,41 @@ class Solution {
     */ 
     public String breakCash(int numPennies) {
         int change = 0;
-	        int dollars  = 0;
-	        int quarters = 0;
-	        int dimes    = 0;
-	        int nickels  = 0;
-	        
-	        dollars = numPennies/100;
-	        
-	        change = numPennies%100;
-	        
-	        quarters = change/25;
-	        if(quarters!=0)
-	        {
-	            change=change%25;
-	        }
-	        
-	        dimes = change/10;
-	        if(dimes!=0)
-	        {
-	            change =  change%10;
-	        }
-	        
-	        nickels= change/5;
-	        if(nickels!=0)
-	        {
-	            change=change%5;
-	        }
-	        
-	       return("dollars: "+dollars+" quarters: "+quarters+" dimes: "+dimes+" nickels: "+nickels+" pennies: "+change);
+        int dollars  = 0;
+        int quarters = 0;
+        int dimes    = 0;
+        int nickels  = 0;
+        double canConversRate = 1.33;
+      
+        double usCash = numPennies/100.0;
+        double canCash = canConversRate * usCash;
+        String canCashOut = String.format("%.2f", canCash);
+
+        dollars = numPennies/100;
+        
+        change = numPennies%100;
+        
+        quarters = change/25;
+        if(quarters!=0)
+        {
+            change=change%25;
+        }
+        
+        dimes = change/10;
+        if(dimes!=0)
+        {
+            change =  change%10;
+        }
+        
+        nickels= change/5;
+        if(nickels!=0)
+        {
+            change=change%5;
+        }
+    
+        String answerString = "In US currency you have: " + dollars + " dollars, " + quarters + " quarters, " + dimes + " dimes, " + nickels + " nickels, " + change + " pennies. " + "\n"
+        + "In Canadian currency you have : " + canCashOut;
+        return(answerString);
 	        
     }
 }
