@@ -1,5 +1,14 @@
+/**
+ * Assignment #2.1
+ * DUE: 03/11/20
+ * PURPOSE: take in a number of pennies and display the amount of dollars and small change as well as the canadian currency conversion
+ * Benjamin Gomez
+ * Section 4107
+ */
+
 
 import java.util.Scanner;
+
 public class HomeworkAssignment2_1 {
     public static void main(String args[]) {
         Scanner reader = new Scanner(System.in); 
