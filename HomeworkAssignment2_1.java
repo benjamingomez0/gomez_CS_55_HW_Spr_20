@@ -20,7 +20,7 @@ public class HomeworkAssignment2_1 {
 }
 class Solution {
     /**
-    * FUNCTION SINGATURE:
+    * FUNCTION SIGNATURE:
     * String breakCash(int numPennies)
     * PURPOSE: the function takes in the total of pennies from the user as input, 
     * computes its equivalent in dollars, quarters, dimes, nickels, and pennies, 
