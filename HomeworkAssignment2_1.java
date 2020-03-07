@@ -1,6 +1,6 @@
 /**
  * Assignment #2.1
- * DUE: 03/11/20
+ * DUE: 03/6/20
  * PURPOSE: take in a number of pennies and display the amount of dollars and small change as well as the canadian currency conversion
  * Benjamin Gomez
  * Section 4107
