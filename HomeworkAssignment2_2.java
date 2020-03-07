@@ -21,7 +21,16 @@ public class HomeworkAssignment2_2 {
        String[] set8 = {"los","los","los"};
        String[] set9 = {"los","los","lr"};
 
-
+       System.out.println(sol.getLargestPrefix(set) + " <== Set1");
+       System.out.println(sol.getLargestPrefix(set2)+ " <== Set2");
+       System.out.println(sol.getLargestPrefix(set3)+ " <== Set3");
+       System.out.println(sol.getLargestPrefix(set4)+ " <== Set4");
+       System.out.println(sol.getLargestPrefix(set5)+ " <== Set5");
+       System.out.println(sol.getLargestPrefix(set6)+ " <== Set6");
+       System.out.println(sol.getLargestPrefix(set7)+ " <== Set7");
+       System.out.println(sol.getLargestPrefix(set8)+ " <== Set8");
+       System.out.println(sol.getLargestPrefix(set9)+ " <== Set9");
+    
     }
 }
 class Solution{
