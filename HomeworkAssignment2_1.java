@@ -28,6 +28,7 @@ class Solution {
     * @param int numPennies
     * @return String output in dollars, quarters, dimes, nickels, and pennies
     */ 
+    
     public String breakCash(int numPennies) {
         int change = 0;
         int dollars  = 0;
