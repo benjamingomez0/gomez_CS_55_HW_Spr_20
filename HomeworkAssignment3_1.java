@@ -41,8 +41,17 @@ class Solution {
         {
             splitArr[i]= input.charAt(i);
         }
-
-        Arrays.sort(splitArr);
+    
+        for(int i = 1; i<input.length() ; i++)
+        {   char currentChar = splitArr[i];
+            int j= i-1;
+            while(j>=0 && splitArr[j] > currentChar)
+            {
+                splitArr[j+1] = splitArr[j];
+                j = j-1;
+            }
+            splitArr[j+1]= currentChar;
+        }
 
         for(int i=0;i<input.length();i++)
         {
