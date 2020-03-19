@@ -1,12 +1,11 @@
 /**
  * Assignment #3.1
  * DUE: 03/13/20
- * PURPOSE: separates all lowercase a's and b's in a string and 
+ * PURPOSE: separates all lowercase a's and b's in a string and returns them in a sorted String
  * Benjamin Gomez
  * Section 4107
  */
 
-import java.util.*;
 
 
 public class HomeworkAssignment3_1 {    
@@ -41,7 +40,7 @@ class Solution {
         {
             splitArr[i]= input.charAt(i);
         }
-    
+    //used the insertion sort here, since I can't use the Arrays.Sort() method
         for(int i = 1; i<input.length() ; i++)
         {   char currentChar = splitArr[i];
             int j= i-1;
@@ -57,8 +56,7 @@ class Solution {
         {
            newStr+= splitArr[i];
         }
-        
-        
+
        return(newStr);
     }
 }
