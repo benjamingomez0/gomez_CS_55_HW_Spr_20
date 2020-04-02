@@ -10,26 +10,26 @@
 
 // public class HomeworkAssignment2_2 {
 //     public static void main(String args[]) {
-//     //    Solution sol = new Solution();
-//     //    String[] set = {"abas","dca","tie"};
-//     //    String[] set2 = {"ate","cate","kate"};
-//     //    String[] set3 = {"os","las","let"};
-//     //    String[] set4 = {"lobotamy","lobo","lobor"};
-//     //    String[] set5 = {"cate","cat","category"};
-//     //    String[] set6 = {"los","las","let"};
-//     //    String[] set7={};
-//     //    String[] set8 = {"los","los","los"};
-//     //    String[] set9 = {"los","los","lr"};
+//        Solution sol = new Solution();
+//        String[] set = {"a","a","b"};
+//        String[] set2 = {"ate","cate","kate"};
+//        String[] set3 = {"os","las","let"};
+//        String[] set4 = {"flower","flow","flight"};
+//        String[] set5 = {"cate","cat","category"};
+//        String[] set6 = {"los","las","let"};
+//        String[] set7={};
+//        String[] set8 = {"los","los","los"};
+//        String[] set9 = {"los","los","lr"};
 
-//     //    System.out.println(sol.getLargestPrefix(set) + " <== Set1");
-//     //    System.out.println(sol.getLargestPrefix(set2)+ " <== Set2");
-//     //    System.out.println(sol.getLargestPrefix(set3)+ " <== Set3");
-//     //    System.out.println(sol.getLargestPrefix(set4)+ " <== Set4");
-//     //    System.out.println(sol.getLargestPrefix(set5)+ " <== Set5");
-//     //    System.out.println(sol.getLargestPrefix(set6)+ " <== Set6");
-//     //    System.out.println(sol.getLargestPrefix(set7)+ " <== Set7");
-//     //    System.out.println(sol.getLargestPrefix(set8)+ " <== Set8");
-//     //    System.out.println(sol.getLargestPrefix(set9)+ " <== Set9");
+//        System.out.println(sol.getLargestPrefix(set) + " <== Set1");
+//        System.out.println(sol.getLargestPrefix(set2)+ " <== Set2");
+//        System.out.println(sol.getLargestPrefix(set3)+ " <== Set3");
+//        System.out.println(sol.getLargestPrefix(set4)+ " <== Set4");
+//        System.out.println(sol.getLargestPrefix(set5)+ " <== Set5");
+//        System.out.println(sol.getLargestPrefix(set6)+ " <== Set6");
+//        System.out.println(sol.getLargestPrefix(set7)+ " <== Set7");
+//        System.out.println(sol.getLargestPrefix(set8)+ " <== Set8");
+//        System.out.println(sol.getLargestPrefix(set9)+ " <== Set9");
     
 //     }
 // }
@@ -137,7 +137,7 @@
 //                 j++;
 //             }
 
-//             if(indexOfLastMatch!=-999)
+//             if(indexOfLastMatch!=-999 )
 //             {
 //                 returnString= words[0].substring(0,(indexOfLastMatch+1));                
 //             }
