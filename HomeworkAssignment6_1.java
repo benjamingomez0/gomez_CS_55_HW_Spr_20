@@ -1,9 +1,9 @@
- /*     * Assignment #6.1
-        * DUE: 04/3/20
-        * PURPOSE: Left shifts elements in array over M number times 
-        * Benjamin Gomez
-        * Section 4107
-*/
+//  /*     * Assignment #6.1
+//         * DUE: 04/3/20
+//         * PURPOSE: Left shifts elements in array over M number times 
+//         * Benjamin Gomez
+//         * Section 4107
+// */
 
 // public class HomeworkAssignment6_1 {
 
@@ -48,13 +48,13 @@
 //         //assign last element temp value
 //         arr[arr.length-1]=temp;
 //     }
-// /*       *
-//           * FUNCTION SIGNATURE:  public void leftShiftElements(int[] arr, int M)
-//           * PURPOSE: shifts the array m times 
-//           * @param int[] arr, int M
-//           * @return void
-//           *
-// */  
+/*       *
+          * FUNCTION SIGNATURE:  public void leftShiftElements(int[] arr, int M)
+          * PURPOSE: shifts the array m times 
+          * @param int[] arr, int M
+          * @return void
+          *
+*/  
 //     public void leftShiftElements(int[] arr, int M)
 //     {
 //         //run the shift one function as many times as M dictates.
