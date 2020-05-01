@@ -1,9 +1,9 @@
- /*     * Assignment #6.2
-        * DUE: 04/3/20
-        * PURPOSE: determines if two strings are anagrams 
-        * Benjamin Gomez
-        * Section 4107
-*/
+//  /*     * Assignment #6.2
+//         * DUE: 04/3/20
+//         * PURPOSE: determines if two strings are anagrams 
+//         * Benjamin Gomez
+//         * Section 4107
+// */
 
 // import java.util.*;
 
