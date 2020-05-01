@@ -12,7 +12,11 @@ public class HomeworkAssignment8_1 {
       Solution sol = new Solution();
       System.out.println(sol.reverseInt(99)==99);
       System.out.println(sol.reverseInt(-100)==-1);
+      System.out.println(sol.reverseInt(10)==1);
+      System.out.println(sol.reverseInt(14)==41);
+      System.out.println(sol.reverseInt(-14)==-41);
       System.out.println(sol.reverseInt(Integer.MAX_VALUE)==0);
+      System.out.println(sol.reverseInt(Integer.MIN_VALUE)==0);
       
 
     }
@@ -30,14 +34,16 @@ public class HomeworkAssignment8_1 {
         String str;
         String reversed = "";
 
+        // convert the number into a string. note that it takes the absolute value;
         str = neg ? Integer.toString(Math.abs(input)): Integer.toString(input);
-        for(int i =str.length()-1 ; i >= 0; i--)
+        // ternary in for loop is becausse Math.abs returns negative number 
+        for(int i =str.length()-1 ; input == Integer.MIN_VALUE? i > 0:i >=0 ; i--)
         {
             reversed+=str.charAt(i);
 
         }
         Long comparison = Long.parseLong(reversed);
-        if(comparison>Integer.MAX_VALUE)
+        if(comparison > Integer.MAX_VALUE )
         {
             return 0;
         }
@@ -45,7 +51,7 @@ public class HomeworkAssignment8_1 {
         {
             if(neg==true)
             {
-                return 0-Integer.parseInt(reversed);
+                return 0 - Integer.parseInt(reversed);
             }
             else
             {
