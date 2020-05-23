@@ -33,7 +33,7 @@
 //  */
 //    int checkStock(int [] asc, String addr)
 //    {
-//       //copy the ascii hash so i can manipulate the hash
+//       //copy the ascii hash so i can manipulate the array otherwise I'd affect the og array
 //       int [] newArr = Arrays.copyOf(asc, asc.length);
 //       int count =0;
 
@@ -47,7 +47,7 @@
 //          else
 //          {
 //             newArr[(int) addr.charAt(j)]--;
-
+//             //if the last letter reached, return 1 because it's possible
 //             if(j == addr.length()-1)
 //             {
 //                count++;
