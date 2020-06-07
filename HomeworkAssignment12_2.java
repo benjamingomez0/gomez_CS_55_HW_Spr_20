@@ -25,15 +25,20 @@ public class HomeworkAssignment12_2 {
  */
     int getMaxPond(int[] arr)
     {
+        //if only 1 element return 0
        if(arr.length == 0 )
        {
             return 0;
        }
+       //max area declared
        int maxArea =0; 
        
+       // this loops through the array comparing the area created by all the elements in the array;
        for(int i =0, j=arr.length-1; i <= j; i++, j--)
        {
-           int currArea = (Math.min(arr[i],arr[j]))*(j);
+           int height = arr[i]>arr[j]?arr[j]:arr[i];
+           int currArea = (height*j);
+           
            if(maxArea<currArea)
            {
                maxArea = currArea;
