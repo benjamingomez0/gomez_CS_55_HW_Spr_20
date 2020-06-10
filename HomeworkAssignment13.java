@@ -20,7 +20,8 @@ class HomeworkAssignment13 {
                         ls.showStatus();
                         ls.showMenu();                     
                         break;
-               case 3 :// ls.search();
+               case 3 : ls.search();
+                        ls.showStatus();
                         ls.showMenu();
                         break;
                case 4 : selection = -999;
@@ -179,6 +180,41 @@ class LoginSystem
         System.out.println("\nThat user is not logged in.");
         return;
    };
-//    void search() {...};
+   // Search
+   public void search()
+   {
+
+    String query;
+    System.out.println("\nEnter a 5-character ID to search:");
+
+    query = in.nextLine();
+
+    while(query.length() > 5 || query.length() <= 4 || query == "empty")
+    {
+        System.out.println("\nInvalid entry please make sure entry is 5 characters long\n");
+        System.out.println("\nEnter a 5-character ID to search:");
+        query = in.nextLine();
+    }
+
+    //search for user
+    for(int i = 0 ; i< this.labs.length;i++)
+    {
+        for(int j = 0; j< this.labs[i].length;j++)
+        {
+            if(this.labs[i][j]== null)
+            {
+                continue;
+            }
+            else if(this.labs[i][j].equals(query))
+            {
+                System.out.println("\nUser " + query +" is in Lab #"+ (i+1) + " at Computer #"+ (j+1));
+                return;
+            }
+        }  
+    }
+    System.out.println("\nThat user is not logged in.");
+    return;
+
+   }
 
 }
