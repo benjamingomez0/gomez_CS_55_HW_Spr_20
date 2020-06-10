@@ -8,17 +8,17 @@ class HomeworkAssignment13 {
        ls.showStatus();
        ls.showMenu();
        while(selection!= -999)
-       {
+       {    
            selection = in.nextInt();
            switch(selection)
            {
-               case 1:  ls.login();
-                        ls.showStatus();
-                        ls.showMenu();
-
+               case 1:  ls.login();                       
+                        ls.showStatus();                        
+                        ls.showMenu();                   
                         break;
-               case 2 :// ls.logout();
-                        ls.showMenu();
+               case 2 : ls.logout();                        
+                        ls.showStatus();
+                        ls.showMenu();                     
                         break;
                case 3 :// ls.search();
                         ls.showMenu();
@@ -112,35 +112,73 @@ class LoginSystem
         System.out.println("Invalid entry, please enter a number from 1 - 10");
         System.out.println("Please enter the computer number number: ");
         compNum = in.nextInt();
-
        }
+
        --compNum;
        --labNum;
+
         //search for user
-        for(int i = 0 ; i< labs.length;i++)
+        for(int i = 0 ; i< this.labs.length;i++)
         {
-            for(int j = 0; j< labs[i].length;j++)
-            {
-                if(labs[i][j]==login)
+            for(int j = 0; j< this.labs[i].length;j++)
+            {   
+                if(this.labs[i][j]==null)
                 {
-                    System.out.println("ERROR, user "+ login + " is already logged into a station.");
+                    continue;
+                }             
+                else if(this.labs[i][j].equals(login))
+                {
+                    System.out.println("\nERROR, user "+ login + " is already logged into a station.\n");
                     return;
                 }
             }  
         }
 
-       if(labs[labNum][compNum]== null || labs[labNum][compNum] == "")
+       if(this.labs[labNum][compNum]== null || this.labs[labNum][compNum] == "")
        {
-            labs[labNum][compNum] = login;
+            this.labs[labNum][compNum] = login;
        }
-       else if( labs[labNum][compNum] !=null && labs[labNum][compNum] != "")
+       else if( this.labs[labNum][compNum] !=null && this.labs[labNum][compNum] != "")
        {
-        System.out.println("ERROR, user "+ labs[labNum][compNum] + " is already logged into that station.");
+        System.out.println("ERROR, user "+ this.labs[labNum][compNum] + " is already logged into that station.");
        }
       
 
    };
-//    void logout() {...};
+   //logout
+   public void logout()
+   {
+        String logout;
+        System.out.println("\nEnter your 5-character ID to logout:");
+
+        logout = in.nextLine();
+
+        while(logout.length() > 5 || logout.length() <= 4 || logout == "empty")
+        {
+            System.out.println("\nInvalid entry please make sure entry is 5 characters long\n");
+            System.out.println("\nEnter your 5-character ID to logout: ");
+            logout = in.nextLine();
+        }
+        //search for user
+        for(int i = 0 ; i< this.labs.length;i++)
+        {
+            for(int j = 0; j< this.labs[i].length;j++)
+            {
+                if(this.labs[i][j]== null)
+                {
+                    continue;
+                }
+                else if(this.labs[i][j].equals(logout))
+                {
+                    this.labs[i][j]= null;
+                    System.out.println("\nUser " + logout +" is logged out\n");
+                    return;
+                }
+            }  
+        }
+        System.out.println("\nThat user is not logged in.");
+        return;
+   };
 //    void search() {...};
 
 }
